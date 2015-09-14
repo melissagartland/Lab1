@@ -1,5 +1,5 @@
 /*
- * Name: Melissa Gartland
+ * Name: Melissa Gartland and Kayla Gustafson
  * Title: Lab 1
  * Date: 9/12/2015
  * Description: program takes user information to calculate how much will need to be 
@@ -15,12 +15,15 @@ package MainPackage;
 import org.apache.poi.ss.formula.functions.FinanceLib; //import FinanceLib
 import java.util.Scanner; //import scanner
 
+
 public class GartlandLab1
 {
+	private static Scanner kb;
+
 	public static void main(String[] args)
 
 	{
-		Scanner kb = new Scanner(System.in);
+		kb = new Scanner(System.in);
 		
 		System.out.println("Please enter the following information."); //prompt user to enter information
 	
@@ -56,7 +59,7 @@ public class GartlandLab1
 		//PMT calculations
 		double PMT;
 		
-		System.out.print("Adjusted percent annual return as decimal: ");
+		System.out.print("Adjusted percent annual return as decimal: "); 
 		annualReturn = kb.nextDouble(); //new r value
 		
 		System.out.print("Years left in work: ");
@@ -68,10 +71,10 @@ public class GartlandLab1
 		f = PV;
 		t = false;
 		
-		PMT = FinanceLib.pmt(r, n, p, f, t);
+		PMT = FinanceLib.pmt(r, n, p, f, t);  //PMT caclulation formula; will out put the monthly total to be saved
 		System.out.println("Monthly amount to be saved: " + PMT);
 		
-			
+		 	
 	}
 
 }
